@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Board from "./components/Board";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+const App = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header className={"header"} title={"The Job Board"} />
+      <div className="board">
+        <Board
+          className={"red"}
+          description={"Full Time Sales Associate - Sydney Boutique"}
+          contrat={"CDI - France - Paris"}
+        />
+        <Board
+          className={"green"}
+          description={"Agent de securite - Pantin"}
+          contrat={"CDI - Austalie - Sydney"}
+        />
+        <Board
+          className={"yellow"}
+          description={"Respoinsable d'Atelier (H/F)"}
+          contrat={"CDI - Suede - Stockholme"}
+        />
+        <Board
+          className={"blue"}
+          description={"Chef de projet"}
+          contrat={"CDI - France - Pantin"}
+        />
+        <Board
+          className={"pink"}
+          description={"Developpeur React.js"}
+          contrat={"CDI - France - Paris"}
+        />
+        <Board
+          className={"red"}
+          description={"Sales Associate Stockholm"}
+          contrat={"CDI - France - Paris"}
+        />
+        <Board
+          className={"green"}
+          description={"Vendeur/se - Crans Montana"}
+          contrat={"CDI - France - Paris"}
+        />
+        <Board
+          className={"yellow"}
+          description={"CRM & Data Quality Analyst"}
+          contrat={"CDI - France - Paris"}
+        />
+        <Board
+          className={"blue"}
+          description={"Infermmiere(H/F)"}
+          contrat={"CDI - France - Paris"}
+        />
+      </div>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
